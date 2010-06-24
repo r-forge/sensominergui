@@ -1,0 +1,48 @@
+menu    SensoMineRMenu       topMenu         ""                                      ""                          ""    	""
+
+item    topMenu         cascade         "SensoMineR"                                 SensoMineRMenu                   ""                      ""
+       
+menu    designMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    designMenu       command         "Construct optimal design"              SensOptDesign         ""                      ""
+item    designMenu       command         "Duplicate optimal design"              SensOptDesign         ""                      ""
+item    SensoMineRMenu         cascade        "Optimal design"                                 designMenu                   ""                      ""
+
+menu    caractMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    caractMenu       command         "Boxplot by product"              SensBoxprod         "factorsP() &&numericP(2)"                      ""
+item    caractMenu       command         "Description of each product"                 SensDecat         "factorsP() &&numericP(2)"                      ""
+item    caractMenu       command         "Multidimensional sensory profile"                 SensPanellipse         "factorsP() &&numericP(2)"                      ""
+item    SensoMineRMenu         cascade        "Characterization products"                                 caractMenu                   ""                      ""
+
+menu    perfMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    perfMenu       command          "Panel performance"              SensPanelperf         "factorsP(2) &&numericP(2)"                      ""
+item    perfMenu       command         "Panelist performance"                 SensPaneliperf         "factorsP(2) &&numericP(2)"                      ""
+item    perfMenu       command          "Reproducibility and repeatability (interaction study)"              SensGraphinter         "factorsP(2) &&numericP()"                      ""
+item    perfMenu       command         "Repeatability of the multidimensional sensory profile"                 SensPanellipse.Sess         "factorsP(3) &&numericP(2)"                      ""
+item    SensoMineRMenu         cascade        "Panel performance"                                 perfMenu                   ""                      ""
+
+menu    PrefMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    PrefMenu       command         "Preference mapping"              SensCarto         ""                      ""
+item    PrefMenu       command         "Consumer Preference's Analysis"                 SensCPA         ""                      ""
+item    SensoMineRMenu         cascade        "Relating Preference and sensory data"                                 PrefMenu                   ""                      ""
+
+menu    TriangMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    TriangMenu       command         "Design for triangle test"              SensTriangdesign         ""                      ""
+item    TriangMenu       command         "Analyse triangle test"                 SensTriang         "activeDataSetP()"                      ""
+item    SensoMineRMenu         cascade        "Triangle tests"                                 TriangMenu                   ""                      ""
+
+item    SensoMineRMenu       command         "Panels comparison"                 SensPanelmatch         ""                      ""
+
+menu    NappMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    NappMenu       command         "Draw napping tablecoth"              SensDrawnapp         "numericP(2)"                      ""
+item    NappMenu       command         "Procrustes Multiple Factor Analysis"                 SensPmfa         "numericP(4)"                      ""
+item    NappMenu       command         "Indscal model"                 SensIndscal         "numericP(4)"                      ""
+item    NappMenu       command         "Sorting Task"                 SensFAST         "factorsP(2)"                      ""
+item    SensoMineRMenu         cascade        "Holistic approaches"                                 NappMenu                   ""                      ""
+
+menu    functMenu       SensoMineRMenu         ""                                      ""                          ""    	""
+item    functMenu       command          "Evaluation of data"              SensArdi         "factorsP() &&numericP(2)"                      ""
+item    functMenu       command         "Histogram by descriptors"                 Senshist         "numericP(2)"                      ""
+item    functMenu       command          "Average by product and by descriptor"              SensAverage         "factorsP() &&numericP(2)"                      ""
+item    functMenu       command         "Scale data by assessor"                 SensScaleby         "factorsP(2) &&numericP(2)"                      ""
+item    functMenu       command         "Interaction"                 SensGraphinter         "factorsP(2) &&numericP()"                      ""
+item    SensoMineRMenu         cascade        "Tools functions"                                 functMenu                   ""                      ""
