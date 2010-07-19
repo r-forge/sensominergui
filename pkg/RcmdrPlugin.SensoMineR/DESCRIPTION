@@ -1,7 +1,7 @@
 Package: RcmdrPlugin.SensoMineR
 Type: Package
 Title: Graphical User Interface for SensoMineR
-Version: 1.01
+Version: 1.11
 Date: 2007-08-10
 Author: F. Husson, J. Josse, S. Le
 Encoding: latin1
