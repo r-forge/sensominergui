@@ -3503,7 +3503,7 @@ App<-function(){
     resultat<-tclvalue(resu.val)
     done = 0
       done = 1
-      command3=paste(resultat,'=cpa(',nomdonnee,'[,c("', paste(variable, collapse='", "'), '")],',nomdonnee,'[,c("', paste(hedo.var, collapse='", "'), '")],coord = c(',Raxe,') ,scale.unit=', scaleu.val ,',nb.clusters=',as.numeric(tclvalue(nbclusters.val)), ',center=', Rcenter , ',scale=', Rscale ,',name.panelist=', Rnamepan ,  ')',sep='')
+      command3=paste(resultat,'=cpa(',nomdonnee,'[,c("', paste(variable, collapse='", "'), '")],',nomdonnee,'[,c("', paste(hedo.var, collapse='", "'), '")],coord = c(',Raxe,') ,scale.unit=', scaleu.val ,',nb.clusters=',as.numeric(tclvalue(nbclusters.val)), ',center=', Rcenter , ',scale=', Rscale , ')',sep='')
       justDoIt(command3)
       logger(command3)
       cpaRes<-get(resultat)
