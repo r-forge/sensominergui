@@ -165,8 +165,7 @@ buttonsFrame<-NULL
 ############################# histprod
 
 Senshist<-function(){
-require(tcltk)        ### Appel aux packages
-require(relimp)       ## qui vont être utilisés
+require(tcltk)        ### Appel aux packages qui vont être utilisés
 require(SensoMineR)
 top<-tktoplevel(borderwidth=10)     ### Création de la fenêtre principale
 tkwm.title(top,"Histprod")        ### Donne un titre à la fenêtre principale
